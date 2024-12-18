@@ -1,0 +1,70 @@
+-------------------------------------------------------------
+                      Nmap Scans
+-------------------------------------------------------------
+
+$ export IP="x.x.x.x" 
+
+$ nmap -p- -sC -sV $IP --open
+
+-------------------------------------------------------------
+                Protocols and Port Numbers
+-------------------------------------------------------------
+
+File Transfer Protocols
+- FTP: 20/21
+- TFTP: 69
+- FTP (over TLS/SSL): 990
+
+Secure Shell & Remote Access
+- SSH: 22
+- Telnet: 23
+- Telnet (over SSL): 992
+- RDP: 3389
+- VNC: 5900
+
+Email Protocols
+- SMTP: 25
+- SMTPS: 465
+- POP3: 110
+- POP3S: 995
+- IMAP: 143
+- IMAPS: 993
+- IMAP4 (over SSL): 993
+- POP3 (over SSL): 995
+
+Web and HTTP Protocols
+- HTTP: 80, 8000, 8080
+- HTTPS: 443
+- HTTPS (alternative): 8443, 10443
+- Webmin Ports: 10000 (look out for high ports)
+
+Network Services
+- DNS: 53
+- DHCP: 67/68
+- NTP: 123
+- SNMP: 161/162
+- RADIUS: 1812/1813
+- Kerberos: 88
+- IKE (Internet Key Exchange): 500
+
+Database Services
+- MSSQL: 1433
+- MySQL: 3306
+- PostgreSQL: 5432
+- MongoDB: 27017
+- Redis: 6379
+
+Directory and File Services
+- LDAP: 389
+- LDAP (over SSL): 636
+- NetBIOS: 139
+- AFP (Apple Filing Protocol): 548
+
+Additional Protocols
+- IRC: 194, 6667
+- SIP (Session Initiation Protocol): 5060/5061
+- NNTP (Network News Transfer Protocol): 119
+- RIP: 520
+- MSRPC: 135
+
+-------------------------------------------------------------
