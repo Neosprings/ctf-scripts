@@ -13,9 +13,9 @@ Example Aliases
 Add these lines to your ~/.bashrc or ~/.zshrc:
 
 ```bash
-alias revshells='cat ~/path/to/reverse_shells.txt'
-alias ttybreakout='cat ~/path/to/tty_breakout.txt'
-alias nmapref='cat ~/path/to/nmap_scans.txt'
+alias revshells='cat ~/path/to/reverse_shells'
+alias ttybreakout='cat ~/path/to/tty_breakout'
+alias nmapref='cat ~/path/to/nmap_scans'
 ```
 Then reload your configuration:
 
